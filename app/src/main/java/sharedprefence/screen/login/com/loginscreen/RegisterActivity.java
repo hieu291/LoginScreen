@@ -54,11 +54,14 @@ public class RegisterActivity extends AppCompatActivity {
         Setting setting = Setting.getIntance(this);
         String user = edtRegisterUser.getText().toString();
         String pass = edtRegisterPass.getText().toString();
-        setting.setUsername(edtRegisterUser.getText().toString());
-        setting.setPASSWORLD(edtRegisterPass.getText().toString());
+        setting.setUsername(user);
+        setting.setPASSWORLD(pass);
         if (TextUtils.isEmpty(user) && TextUtils.isEmpty(pass) && !cbAgreeRegister.isChecked())
         {
             Toast.makeText(RegisterActivity.this,"You need agree and don't let empty Username and Password",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(RegisterActivity.this,"Register succesfully",Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 }
