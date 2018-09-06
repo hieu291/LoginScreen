@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubActivity">
+    tools:context=".SubActivity"
+    android:orientation="vertical">
+    <TextView
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preview"/>
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imgPreview"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="250dp"/>
+    <Button
+        android:id="@+id/btnSet"
+        android:text="Set"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+    <GridView
+        android:layout_margin="4dp"
+        android:id="@+id/gridWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="spacingWidth"
+        android:verticalSpacing="1dp"></GridView>
+
+
+</LinearLayout>
